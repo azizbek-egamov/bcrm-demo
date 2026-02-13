@@ -1,19 +1,6 @@
 import axios from 'axios';
 
-// Dynamic API URL based on hostname
-const getApiUrl = () => {
-    const hostname = window.location.hostname;
-
-    // Cloudflare tunnel domain
-    if (hostname === 'drinks-por-valued-truly.trycloudflare.com') {
-        return 'https://penny-female-eliminate-precipitation.trycloudflare.com/api';
-    }
-
-    // Local development
-    return 'http://localhost:8000/api';
-};
-
-const API_URL = getApiUrl();
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
 
 const api = axios.create({
     baseURL: API_URL,
