@@ -1,0 +1,41 @@
+.column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.column-filter-select {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    max-width: 120px;
+    transition: all 0.2s;
+}
+
+.column-filter-select:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.column-filter-select option {
+    background: #1e1e2d;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .column-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .column-filter-select {
+        max-width: 100%;
+        width: 100%;
+    }
+}
