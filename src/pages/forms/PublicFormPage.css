@@ -326,6 +326,20 @@
     color: white;
 }
 
+.success-state h2 {
+    color: var(--public-text);
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0 0 12px;
+}
+
+.success-state p {
+    color: var(--public-text-muted);
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+}
+
 /* --- Footer --- */
 .form-footer {
     padding: 24px;
